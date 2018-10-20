@@ -29,6 +29,7 @@ export class SignupComponent implements OnInit {
   get f() { return this.form.controls; }
   form: FormGroup;
   submitted = false;
+  authUser = 0; // 1-already exist, 0-created, -1-error
 
   MatchPassword(AC: AbstractControl) {
     const password = AC.get('password').value;
@@ -56,10 +57,17 @@ export class SignupComponent implements OnInit {
     this.auth.signupUser(name_, email_, password_, contact_).subscribe(
       data => {
         console.log(data);
-        if (Object.keys(data).length > 0) {
-          this.router.navigate(['/signin']);
-        } else {
-          this.router.navigate(['/userNamePasswordInvalid']);
+        // const data_ = JSON.stringify(data);
+        if (data) {
+          if (data.status === 202) {
+            this.authUser = 1;
+            this.form.invalid;
+          } else if (data.status === 201) {
+            this.router.navigate(['/signin'], {queryParams: {name: name_}});
+          } else {
+            this.authUser = -1;
+            this.form.invalid;
+          }
         }
       },
       error => {

@@ -5,6 +5,12 @@
     </div>
     <h1 class="display4">- </h1>
     <p class="subhead">Welcome to the TRIP App</p>
+
+    <div *ngIf="submitted && authUser" class="invalid-feedback">
+      <div *ngIf="submitted && authUser === 1" class="text-danger text-center">User already exist, <a [routerLink]="['/signin']">login</a> here.</div>
+      <div *ngIf="submitted && authUser === -1" class="text-danger text-center">Something went wrong, please try again later...</div>
+    </div>
+
     <form class="" role="form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
       <div id="form-login-name" class="form-group">
