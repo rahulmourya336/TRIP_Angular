@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
 export class SigninComponent implements OnInit {
   form: FormGroup;
   submitted = false;
-  authUser = false;
+  verifiedUser = false;
 
 
   constructor(private fb: FormBuilder, private auth: AuthenticationService, private router: Router) {
@@ -49,7 +49,7 @@ export class SigninComponent implements OnInit {
         if (Object.keys(data).length > 0) {
           this.router.navigate(['/dashboard']);
         } else {
-          this.authUser = true;
+          this.verifiedUser = true;
           this.form.invalid;
         }
       },
@@ -57,10 +57,4 @@ export class SigninComponent implements OnInit {
         console.warn('Error:', error);
       });
   }
-
-
-  // newUser() {
-  //   this.model = new Users('', '');
-  // }
-
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {AuthenticationService} from '../authentication.service';
 import {Router} from '@angular/router';
+import {AbstractControl} from '@angular/forms';
 
 
 @Component({
@@ -10,20 +11,36 @@ import {Router} from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  form: FormGroup;
 
 
   constructor(private fb: FormBuilder, private auth: AuthenticationService, private router: Router) {
     this.form = this.fb.group({
-      name = ['', Validators.required],
-      email = ['', [Validators.required, Validators.email]],
-      password = ['', [Validators.required, Validators.minLength(6)]],
-      contact = ['', [Validators.required, Validatros.minLength(10)]],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      contact: ['', [Validators.required, Validators.minLength(10)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
+    }, {
+      validator: this.MatchPassword
     });
   }
 
   // convenience getter for easy access to form fields
   get f() { return this.form.controls; }
+  form: FormGroup;
+  submitted = false;
+
+  MatchPassword(AC: AbstractControl) {
+    const password = AC.get('password').value;
+    const confirmPassword = AC.get('confirmPassword').value;
+    if (password !== confirmPassword) {
+      console.log('false');
+      AC.get('confirmPassword').setErrors( {MatchPassword: true} );
+    } else {
+      console.log('true');
+      return null;
+    }
+  }
 
   onSubmit() {
     this.submitted = true;
@@ -40,13 +57,13 @@ export class SignupComponent implements OnInit {
       data => {
         console.log(data);
         if (Object.keys(data).length > 0) {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/signin']);
         } else {
           this.router.navigate(['/userNamePasswordInvalid']);
         }
       },
       error => {
-        console.warn('Error:', error);
+        console.warn('Signup Error:', error);
       });
   }
 

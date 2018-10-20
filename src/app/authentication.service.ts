@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface User {
   _id: object;
@@ -37,13 +37,14 @@ export class AuthenticationService {
   }
 
   signupUser(name: string, email: string, password: string, contact: string) {
+  const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.post('http://localhost:4500/api/v1/auth/signup',
       {
         'name': name,
         'email': email,
         'password': password,
         'contact': contact,
-      });
+      }, options);
   }
 
   getAllTrips() {
