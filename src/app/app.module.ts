@@ -10,6 +10,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     SigninComponent,
     SignupComponent,
     ErrorPageComponent,
+    DashboardComponent,
 
   ],
   imports: [

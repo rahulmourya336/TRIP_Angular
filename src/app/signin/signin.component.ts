@@ -33,14 +33,13 @@ export class SigninComponent implements OnInit {
     this.auth.signinUser(username_, password_).subscribe(
       data => {
         console.log(data);
-        if (data.length > 0) {
+        if (Object.keys(data).length > 0) {
           this.router.navigate(['/dashboard']);
         } else {
           this.router.navigate(['/userNamePasswordInvalid']);
         }
       },
       error => {
-        signinStatus = error;
         console.warn('Error:', error);
       });
   }
