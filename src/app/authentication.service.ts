@@ -36,6 +36,16 @@ export class AuthenticationService {
       });
   }
 
+  signupUser(name: string, email: string, password: string, contact: string) {
+    return this.http.post('http://localhost:4500/api/v1/auth/signup',
+      {
+        'name': name,
+        'email': email,
+        'password': password,
+        'contact': contact,
+      });
+  }
+
   getAllTrips() {
     return this.http.get('http://localhost:4500/api/v1/trip');
   }

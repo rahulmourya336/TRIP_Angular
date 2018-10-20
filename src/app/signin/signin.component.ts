@@ -13,30 +13,44 @@ import {Router} from '@angular/router';
 
 export class SigninComponent implements OnInit {
   form: FormGroup;
+  submitted = false;
+  authUser = false;
 
-  username = new FormControl('', Validators.required);
-  password = new FormControl('', Validators.required);
 
-  constructor(fb: FormBuilder, private auth: AuthenticationService, private router: Router) {
-    this.form = fb.group({
-      'username': this.username,
-      'password': this.password
+  constructor(private fb: FormBuilder, private auth: AuthenticationService, private router: Router) {
+  }
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      pwd: ['', [Validators.required, Validators.minLength(6)]],
     });
+  }
+
+  // convenience getter for easy access to form fields
+  get f() {
+    return this.form.controls;
   }
 
 
   onSubmit() {
-    console.log('Signin from submitted');
-    console.log(this.form);
-    const username_ = this.form.value.username;
-    const password_ = this.form.value.password;
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.form.invalid) {
+      return;
+    }
+
+    const username_ = this.form.value.email;
+    const password_ = this.form.value.pwd;
+
     this.auth.signinUser(username_, password_).subscribe(
       data => {
         console.log(data);
         if (Object.keys(data).length > 0) {
           this.router.navigate(['/dashboard']);
         } else {
-          this.router.navigate(['/userNamePasswordInvalid']);
+          this.authUser = true;
+          this.form.invalid;
         }
       },
       error => {
@@ -44,8 +58,6 @@ export class SigninComponent implements OnInit {
       });
   }
 
-  ngOnInit() {
-  }
 
   // newUser() {
   //   this.model = new Users('', '');
