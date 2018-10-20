@@ -29,20 +29,11 @@ export class AuthenticationService {
   // }
 
   signinUser(username: string, password: string) {
-    this.http.post('http://localhost:4500/api/v1/auth/signin',
+    return this.http.post('http://localhost:4500/api/v1/auth/signin',
       {
         'email': username,
         'password': password
-      })
-      .subscribe(
-        data => {
-          console.log(data);
-          return(data);
-        },
-        error => {
-          console.log('Error', error);
-        }
-      );
+      });
   }
 
   getAllTrips() {
