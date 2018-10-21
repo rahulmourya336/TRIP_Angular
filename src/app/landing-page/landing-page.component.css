@@ -68,14 +68,15 @@ header{
   height: 200px;
 }
 .illustration{
-  float: right;
+position: relative;
 }
 
 .illustration  > img{
-  float: right;
-  position:  relative;
-  top: 30px;
-  right: 100px;
+  position:  fixed;
+  top: 0px;
+  left: 400px;
+  height: 100%;
+  width: 100%;
 }
 
 #splash .anim {
