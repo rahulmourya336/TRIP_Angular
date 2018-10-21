@@ -7,13 +7,15 @@ import { SigninComponent } from '../app/signin/signin.component';
 import { SignupComponent } from '../app/signup/signup.component';
 import { ErrorPageComponent } from '../app/error-page/error-page.component';
 import { DashboardComponent } from '../app/dashboard/dashboard.component';
+import { LandingPageComponent } from '../app/landing-page/landing-page.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/landingPage', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'landingPage', component: LandingPageComponent },
 
   {path: '**', component: ErrorPageComponent }
 ];
