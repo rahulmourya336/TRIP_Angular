@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 /*-- Body style ---------------------------------- */
-*{
+* {
   font-family: 'Roboto Mono', monospace;
 
 }
@@ -15,6 +15,7 @@
   align-content: center;
 
 }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -39,7 +40,7 @@ html, body {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
 }
 
 #loader:after {
@@ -50,12 +51,14 @@ html, body {
   bottom: -170px;
   width: 3px;
   background: #fff;
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
   height: 200px;
 }
-header{
+
+header {
   display: inline-block !important;
 }
+
 #loader:before {
   content: '';
   position: absolute;
@@ -64,15 +67,16 @@ header{
   bottom: -190px;
   width: 3px;
   background: #000;
-  background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, 0) 100%);
   height: 200px;
 }
-.illustration{
-position: relative;
+
+.illustration {
+  position: relative;
 }
 
-.illustration  > img{
-  position:  fixed;
+.illustration > img {
+  position: fixed;
   top: 0px;
   left: 400px;
   height: 100%;
@@ -84,7 +88,7 @@ position: relative;
   position: absolute;
   left: 50%;
   width: 100px;
-  transform: translate(-50%,100%);
+  transform: translate(-50%, 100%);
   animation: loader 4s linear;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -92,30 +96,32 @@ position: relative;
 
 @keyframes loader {
   0% {
-    transform: translate(-50%,110%);
+    transform: translate(-50%, 110%);
   }
   30% {
-    transform: translate(-50%,50%);
+    transform: translate(-50%, 50%);
   }
   100% {
-    transform: translate(-50%,0%);
+    transform: translate(-50%, 0%);
   }
 }
 
 @keyframes splash {
   0% {
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
   }
   50% {
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
   }
   100% {
-    transform: translate(0%,-100%);
+    transform: translate(0%, -100%);
   }
 }
-span{
-  margin:0 5px 0 10px;
+
+span {
+  margin: 0 5px 0 10px;
 }
+
 /**
 Button css
  */
@@ -125,7 +131,9 @@ Button css
   color: #58afd1;
   transition: color 0.25s 0.0833333333s;
   position: relative;
+  margin: 30px 0 0 0;
 }
+
 .draw-border::before, .draw-border::after {
   border: 0 solid transparent;
   box-sizing: border-box;
@@ -137,26 +145,32 @@ Button css
   bottom: 0;
   right: 0;
 }
+
 .draw-border::before {
   border-bottom-width: 4px;
   border-left-width: 4px;
 }
+
 .draw-border::after {
   border-top-width: 4px;
   border-right-width: 4px;
 }
+
 .draw-border:hover {
   color: #ffe593;
 }
+
 .draw-border:hover::before, .draw-border:hover::after {
   border-color: #ffe593;
   transition: border-color 0s, width 0.15s, height 0.15s;
   width: 100%;
   height: 100%;
 }
+
 .draw-border:hover::before {
   transition-delay: 0s, 0s, 0.15s;
 }
+
 .draw-border:hover::after {
   transition-delay: 0s, 0.15s, 0s;
 }
@@ -170,6 +184,14 @@ Button css
   padding: 1em 2em;
   letter-spacing: 0.05rem;
 }
+
 .btn:focus {
   outline: 2px dotted #55d7dc;
+}
+
+.blockquote{
+  font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: justify;
+  width: 45%;
+  line-height: 2em;
 }
