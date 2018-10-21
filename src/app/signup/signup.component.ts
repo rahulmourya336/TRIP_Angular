@@ -56,13 +56,13 @@ export class SignupComponent implements OnInit {
 
     this.auth.signupUser(name_, email_, password_, contact_).subscribe(
       data => {
-        console.log(data);
+        console.log(Object.values(data) );
         // const data_ = JSON.stringify(data);
         if (data) {
-          if (data.status === 202) {
+          if (Object.values(data)[0] === 202) {
             this.authUser = 1;
             this.form.invalid;
-          } else if (data.status === 201) {
+          } else if (Object.values(data)[0] === 201) {
             this.router.navigate(['/signin'], {queryParams: {name: name_}});
           } else {
             this.authUser = -1;
