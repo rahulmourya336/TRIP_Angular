@@ -18,6 +18,9 @@ export class SigninComponent implements OnInit {
 
 
   constructor(private fb: FormBuilder, private auth: AuthenticationService, private router: Router) {
+    if (localStorage.getItem('currentUser').length > 0) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   ngOnInit() {

@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AddTripFormComponent } from './add-trip-form/add-trip-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     ErrorPageComponent,
     DashboardComponent,
     LandingPageComponent,
+    AddTripFormComponent,
 
   ],
   imports: [

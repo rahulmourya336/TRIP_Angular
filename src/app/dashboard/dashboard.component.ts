@@ -11,7 +11,6 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router) {
     // check for session
     const user = localStorage.getItem('currentUser');
-    console.log(typeof user);
     if (!user) {
       this.router.navigate(['/signin']);
     }
