@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthenticationService } from './authentication.service';
+import { TripService } from './trip.service';
 
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
@@ -31,7 +32,7 @@ import { AddTripFormComponent } from './add-trip-form/add-trip-form.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService, TripService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

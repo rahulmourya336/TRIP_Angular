@@ -40,7 +40,7 @@
        fx="89.481384"
        fy="109.65549"
        r="63.511036"
-       gradientTransform="matrix(-0.00983491,2.0878166,-7.1504489,-0.0336818,886.52863,-68.185402)"
+       gradientTransform="matrix(-0.00983491,2.0878166,-7.1504489,-0.0336818,846.46315,-143.02469)"
        gradientUnits="userSpaceOnUse" />
     <style
        id="style1049">.cls-1{fill:#f2f2f2;}.cls-2{fill:url(#linear-gradient);}.cls-12,.cls-3{fill:#dedfe0;}.cls-4{fill:#c6c6c6;}.cls-5{fill:#e8e8e8;}.cls-6{isolation:isolate;}.cls-7{fill:#b5b5b5;}.cls-8{fill:#969696;}.cls-9{clip-path:url(#clip-path);}.cls-10{fill:#ffcb39;}.cls-11,.cls-26{fill:#fff;}.cls-11{mix-blend-mode:soft-light;}.cls-12{mix-blend-mode:multiply;}.cls-13{clip-path:url(#clip-path-2);}.cls-14{fill:#5208bc;}.cls-15{fill:#d3d3d3;}.cls-16{fill:url(#linear-gradient-3);}.cls-17{fill:#fcfcfc;}.cls-18{clip-path:url(#clip-path-3);}.cls-19{fill:#c4c4c4;}.cls-20{fill:#adadad;}.cls-21{clip-path:url(#clip-path-4);}.cls-22{clip-path:url(#clip-path-5);}.cls-23{fill:#b2b2b2;}.cls-24{clip-path:url(#clip-path-6);}.cls-25{clip-path:url(#clip-path-7);}.cls-27{fill:#7f1bbf;}.cls-28{fill:url(#linear-gradient-4);}.cls-29{fill:#d8d8d8;}</style>
@@ -177,9 +177,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="214.92003"
-     inkscape:cy="552.39238"
+     inkscape:zoom="3.959798"
+     inkscape:cx="254.77792"
+     inkscape:cy="412.32797"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -207,16 +207,16 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:61.12800217px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#radialGradient887);fill-opacity:1;stroke:none;stroke-width:1.52820003"
-       x="45.655975"
-       y="125.30307"
+       x="5.5904989"
+       y="50.463783"
        id="text817"
        inkscape:export-xdpi="41.596024"
        inkscape:export-ydpi="41.596024"><tspan
          sodipodi:role="line"
          id="tspan815"
-         x="45.655975"
-         y="125.30307"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Product Sans';-inkscape-font-specification:'Product Sans';stroke-width:1.52820003;fill-opacity:1;fill:url(#radialGradient887)">TRIP.</tspan></text>
+         x="5.5904989"
+         y="50.463783"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Product Sans';-inkscape-font-specification:'Product Sans';fill:url(#radialGradient887);fill-opacity:1;stroke-width:1.52820003">TRIP.</tspan></text>
     <g
        id="g1251"
        class="cls-6"
@@ -232,20 +232,52 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:61.12800217px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.52820003;"
-       x="45.655975"
-       y="200.14235"
+       style="font-style:normal;font-weight:normal;font-size:61.12800217px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.52820003"
+       x="5.5904989"
+       y="125.30306"
        id="text817-0"
        inkscape:export-xdpi="20.143009"
        inkscape:export-ydpi="20.143009"><tspan
          sodipodi:role="line"
          id="tspan815-9"
-         x="45.655975"
-         y="200.14235"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Product Sans';-inkscape-font-specification:'Product Sans';fill:#ffffff;fill-opacity:1;stroke-width:1.52820003;">TR<tspan
-   style="fill:#f1ff1f;stroke:#f8f815;stroke-opacity:1;fill-opacity:1"
+         x="5.5904989"
+         y="125.30306"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Product Sans';-inkscape-font-specification:'Product Sans';fill:#ffffff;fill-opacity:1;stroke-width:1.52820003">TR<tspan
+   style="fill:#f1ff1f;fill-opacity:1;stroke:#f8f815;stroke-opacity:1"
    id="tspan891">I</tspan>P<tspan
    style="fill:none;stroke:#f8f815;stroke-opacity:1"
    id="tspan951">.</tspan></tspan></text>
+    <g
+       transform="translate(40.547522,152.07859)"
+       id="g865"
+       inkscape:export-xdpi="56.740807"
+       inkscape:export-ydpi="56.740807"
+       inkscape:export-filename="C:\Users\radio\Desktop\RISE\TRIP\Assets\favicon_16x16.ico.png">
+      <rect
+         style="fill:#6103eb;fill-opacity:0.74901962;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4698"
+         width="7.1623936"
+         height="7.1623936"
+         x="26.174852"
+         y="27.191402"
+         ry="1.0866816" />
+      <circle
+         style="fill:#ffff08;fill-opacity:1;stroke:none;stroke-width:0.20022221;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path4700"
+         cx="31.48769"
+         cy="32.403164"
+         r="0.56794769" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.17203951px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.15430099"
+         x="28.089598"
+         y="32.982189"
+         id="text4704"><tspan
+           sodipodi:role="line"
+           id="tspan4702"
+           x="28.089598"
+           y="32.982189"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Product Sans';-inkscape-font-specification:'Product Sans';fill:#ffffff;fill-opacity:1;stroke-width:0.15430099">T</tspan></text>
+    </g>
   </g>
 </svg>
