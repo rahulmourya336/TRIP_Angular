@@ -158,6 +158,17 @@
        r="63.511036"
        gradientTransform="matrix(-0.00983491,2.0878166,-7.1504489,-0.0336818,886.52863,-68.185402)"
        gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient883"
+       id="radialGradient863"
+       cx="89.481384"
+       cy="109.65549"
+       fx="89.481384"
+       fy="109.65549"
+       r="63.511036"
+       gradientTransform="matrix(-0.00983491,2.0878166,-7.1504489,-0.0336818,886.52863,-68.185402)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -170,7 +181,7 @@
      inkscape:cx="214.92003"
      inkscape:cy="552.39238"
      inkscape:document-units="mm"
-     inkscape:current-layer="Layer_1-2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="715"
@@ -219,5 +230,22 @@
            id="Layer_1-2" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:61.12800217px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.52820003;"
+       x="45.655975"
+       y="200.14235"
+       id="text817-0"
+       inkscape:export-xdpi="20.143009"
+       inkscape:export-ydpi="20.143009"><tspan
+         sodipodi:role="line"
+         id="tspan815-9"
+         x="45.655975"
+         y="200.14235"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Product Sans';-inkscape-font-specification:'Product Sans';fill:#ffffff;fill-opacity:1;stroke-width:1.52820003;">TR<tspan
+   style="fill:#f1ff1f;stroke:#f8f815;stroke-opacity:1;fill-opacity:1"
+   id="tspan891">I</tspan>P<tspan
+   style="fill:none;stroke:#f8f815;stroke-opacity:1"
+   id="tspan951">.</tspan></tspan></text>
   </g>
 </svg>

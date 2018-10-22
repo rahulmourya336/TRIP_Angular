@@ -46,7 +46,12 @@ export class SigninComponent implements OnInit {
     this.auth.signinUser(username_, password_).subscribe(
       data => {
         console.log(data);
+        console.log(typeof data);
         if (Object.keys(data).length > 0) {
+          const email = data[0].email;
+          const userId = data[0]._id;
+          const name = data[0].name;
+          localStorage.setItem('currentUser', JSON.stringify({email: email, id: userId, name: name}));
           this.router.navigate(['/dashboard']);
         } else {
           this.verifiedUser = true;
