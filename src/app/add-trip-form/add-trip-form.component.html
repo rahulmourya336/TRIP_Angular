@@ -1,19 +1,24 @@
 <div class="container">
   <form [formGroup]="tripForm" (ngSubmit)="onSubmit()">
-    <h2>Contact Us</h2>
+    <h2><span class="back--arrow" (click)="goBack()">🡰 </span>Add New Trip</h2>
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <label for="first">First Name</label>
-          <input type="text" class="form-control" placeholder="" id="first">
+          <label for="tripName">Trip Name</label>
+          <input type="text" class="form-control" placeholder="Miami" id="tripName" formControlName="tripName" autofocus size="30">
+          <div *ngIf="submitted && f.tripName.errors">
+            <div *ngIf="f.tripName.errors.required" class="text-danger">Trip name is required</div>
+          </div>
         </div>
+
       </div>
       <!--  col-md-6   -->
 
       <div class="col-md-6">
         <div class="form-group">
-          <label for="last">Last Name</label>
-          <input type="text" class="form-control" placeholder="" id="last">
+          <label for="tripImage">Trip Image</label>
+          <input type="url" class="form-control" placeholder="Type keyword or enter a link (http://)" id="tripImage"
+                 formControlName="tripImage" size="30">
         </div>
       </div>
       <!--  col-md-6   -->
@@ -23,8 +28,12 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <label for="company">Company</label>
-          <input type="text" class="form-control" placeholder="" id="company">
+          <label for="startDate">Start Date:</label>
+          <input type="date" class="form-control" placeholder="Trip Start Date" id="startDate"
+                 formControlName="startDate">
+          <div *ngIf="submitted && f.startDate.errors">
+            <div *ngIf="f.startDate.errors.required" class="text-danger">Select Start date</div>
+          </div>
         </div>
 
 
@@ -34,60 +43,30 @@
       <div class="col-md-6">
 
         <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" class="form-control" id="phone" placeholder="phone">
+          <label for="endDate">End Date:</label>
+          <input type="date" class="form-control" id="endDate" placeholder="Trip End Date" formControlName="endDate">
+          <div *ngIf="submitted && f.endDate.errors">
+            <div *ngIf="f.endDate.errors.required" class="text-danger">Select End date</div>
+          </div>
         </div>
       </div>
       <!--  col-md-6   -->
     </div>
     <!--  row   -->
 
-
     <div class="row">
       <div class="col-md-6">
 
         <div class="form-group">
-          <label for="email">Email address</label>
+          <label for="email">Select Members</label>
           <input type="email" class="form-control" id="email" placeholder="email">
         </div>
       </div>
       <!--  col-md-6   -->
 
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="url">Your Website
-            <small>Please include http://</small>
-          </label>
-          <input type="url" class="form-control" id="url" placeholder="url">
-        </div>
-
-      </div>
-      <!--  col-md-6   -->
     </div>
     <!--  row   -->
 
-
-    <label for="contact-preference">When is the best time of day to reach you?</label>
-    <div class="radio">
-      <label>
-        <input type="radio" name="contact-preference" id="contact-preference" value="am" checked>Morning
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="contact-preference" id="contact-preference" value="pm" checked>Evening
-      </label>
-    </div>
-
-    <label for="newsletter">Would you like to recieve our email newsletter?</label>
-    <div class="checkbox">
-
-      <label>
-        <input type="checkbox" value="Sure!" id="newsletter"> Sure!
-      </label>
-    </div>
-
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Add Trip</button>
   </form>
 </div>
