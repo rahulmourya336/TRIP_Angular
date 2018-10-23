@@ -2,6 +2,10 @@
   <form [formGroup]="tripForm" (ngSubmit)="onSubmit()">
     <h2><span class="back--arrow" (click)="goBack()">🡰 </span>Add New Trip</h2>
     <div class="row">
+      <div *ngIf="submitted && tripStatus">
+        <div *ngIf="submitted && tripStatus === 1" class="text-danger text-center">Error Cannot Trip</div>
+        <div *ngIf="submitted && tripStatus === -1" class="text-danger text-center">Internal Server Error</div>
+      </div>
       <div class="col-md-6">
         <div class="form-group">
           <label for="tripName">Trip Name</label>
