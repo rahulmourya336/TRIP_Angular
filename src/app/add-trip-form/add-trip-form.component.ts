@@ -57,14 +57,11 @@ export class AddTripFormComponent implements OnInit {
     return(console.log(url.match(regex)));
   }
 
- VerifiedUrl(url) {
-    const result;
+  VerifiedUrl(url) {
     this.linkStatus(url, (exists) => {
-      result = exists;
       console.log('exists status', exists);
     });
-
-   return result;
+   // return result;
    // Can't get the result due to callback function - ERROR
   }
 
@@ -87,5 +84,4 @@ export class AddTripFormComponent implements OnInit {
 
     console.log(tripImage_, tripName_, startDate_ , endDate_);
   }
-
 }
