@@ -57,14 +57,15 @@ export class AddTripFormComponent implements OnInit {
     return(console.log(url.match(regex)));
   }
 
-  VerifiedUrl(url) {
-    let result;
+ VerifiedUrl(url) {
+    const result;
     this.linkStatus(url, (exists) => {
-      console.log('exists status', exists);
       result = exists;
+      console.log('exists status', exists);
     });
-    console.log("---------------------", result);
-    return result;
+
+   return result;
+   // Can't get the result due to callback function - ERROR
   }
 
   onSubmit() {
@@ -76,8 +77,8 @@ export class AddTripFormComponent implements OnInit {
     const tripName_ = this.tripForm.value.tripName;
     let tripImage_ = this.tripForm.value.tripImage;
     const result = this.VerifiedUrl(tripImage_);
-    console.warn("OnSubmit Result", result);
-     if(!result){
+     if (!this.linkStatus(tripImage_, (exists) => {})) {
+       console.log('Must be false.');
        tripImage_ = this.defaultThumbnail;
      }
 
