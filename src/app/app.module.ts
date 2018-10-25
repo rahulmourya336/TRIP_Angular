@@ -14,6 +14,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AddTripFormComponent } from './add-trip-form/add-trip-form.component';
+import { TripListComponent } from './trip-list/trip-list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AddTripFormComponent } from './add-trip-form/add-trip-form.component';
     DashboardComponent,
     LandingPageComponent,
     AddTripFormComponent,
+    TripListComponent,
 
   ],
   imports: [

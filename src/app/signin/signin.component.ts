@@ -56,8 +56,11 @@ export class SigninComponent implements OnInit {
           localStorage.setItem('currentUser', JSON.stringify({email: email, id: userId, name: name}));
           this.router.navigate(['/dashboard']);
         } else {
+          console.log('Invalid User');
           this.verifiedUser = true;
-          this.form.invalid;
+          this.form.setErrors({
+           'invalid': true
+          });
         }
       },
       error => {

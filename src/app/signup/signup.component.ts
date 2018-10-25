@@ -12,6 +12,9 @@ import {AbstractControl} from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
+  form: FormGroup;
+  submitted = false;
+  authUser = 0; // 1-already exist, 0-created, -1-error
 
   constructor(private fb: FormBuilder, private auth: AuthenticationService, private router: Router) {
     this.form = this.fb.group({
@@ -27,9 +30,7 @@ export class SignupComponent implements OnInit {
 
   // convenience getter for easy access to form fields
   get f() { return this.form.controls; }
-  form: FormGroup;
-  submitted = false;
-  authUser = 0; // 1-already exist, 0-created, -1-error
+
 
   MatchPassword(AC: AbstractControl) {
     const password = AC.get('password').value;

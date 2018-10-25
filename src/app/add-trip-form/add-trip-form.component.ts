@@ -25,7 +25,7 @@ export class AddTripFormComponent implements OnInit {
     //  Init Form
     this.tripForm = this.fb.group({
       tripName: ['', Validators.required],
-      tripImage: ['', [Validators.required]],
+      tripImage: [''],
       startDate: ['', [Validators.required]],
       endDate: ['', [Validators.required]]
     });
