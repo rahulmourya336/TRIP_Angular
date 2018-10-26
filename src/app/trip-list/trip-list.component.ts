@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {TripService} from '../trip.service';
 
 @Component({
@@ -6,36 +6,34 @@ import {TripService} from '../trip.service';
   templateUrl: './trip-list.component.html',
   styleUrls: ['./trip-list.component.css']
 })
-export class TripListComponent implements OnInit {
+export class TripListComponent implements OnInit, AfterViewInit {
   tripListStatus = 0;
-  tripList = {};
+  tripLists;
 
   constructor(private Trip: TripService) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
 }
+
   ngAfterViewInit() {
     const credentials = JSON.parse(localStorage.getItem('currentUser'));
     const creatorId_ = credentials.id;
 
     this.Trip.getAllTrips(creatorId_).subscribe(
       data => {
-        console.log(Object.values(data) );
-        // const data_ = JSON.stringify(data);
         if (data) {
-          if (Object.values(data)[0] === 400) {
-            this.tripListStatus = 1;
-          } else if (Object.values(data)[0] === 201) {
-            this.tripList = data;
-            console.log('Trip List', data);
-          } else {
-            this.tripListStatus = -1;
-          }
+          this.tripLists = data;
+          console.log('Trip List', this.tripLists);
+          this.tripListStatus = this.tripLists.length;
+        } else {
+          this.tripListStatus = 0;
+          console.log('No trips found');
         }
       },
       error => {
         console.warn('Cannot Create trip:', error);
+        this.tripListStatus = -1;
       });
   }
 
