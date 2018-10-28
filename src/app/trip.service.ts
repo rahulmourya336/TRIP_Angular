@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
 @Injectable({
@@ -6,10 +6,11 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 })
 export class TripService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   createTrip(tripName: string, tripImage: string, startDate: string, endDate: string, creatorId: string) {
-    const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
     return this.http.post('http://localhost:4500/api/v1/trip/',
       {
         'name': tripName,
@@ -23,19 +24,28 @@ export class TripService {
   getAllTrips(creatorId: string) {
     let params = new HttpParams();
     params = params.append('id', creatorId);
-    const headers = { 'Content-Type': 'application/json' };
 
     const options: {
-      headers?: HttpHeaders,
-      observe?: 'body',
       params?: HttpParams,
-      reportProgress?: boolean,
       responseType: 'json',
-      withCredentials?: boolean
     } = {
       params: params,
       responseType: 'json',
     };
-    return this.http.get('http://localhost:4500/api/v1/trip/',  options);
+    return this.http.get('http://localhost:4500/api/v1/trip/', options);
+  }
+
+  removeTrip(tripId: string) {
+    const options: {
+      params?: HttpParams,
+      responseType: 'json',
+    } = {
+      responseType: 'json',
+    };
+    return this.http.delete('http://localhost:4500/api/v1/trip/' + tripId, options);
+  }
+
+  patchTrip(tripId: string) {
+
   }
 }

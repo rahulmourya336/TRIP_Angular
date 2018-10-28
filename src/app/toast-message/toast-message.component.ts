@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-toast-message',
+  templateUrl: './toast-message.component.html',
+  styleUrls: ['./toast-message.component.css']
+})
+export class ToastMessageComponent implements OnInit {
+  private message: string;
+  constructor(private message: string) {
+    this.message = message;
+  }
+
+  ngOnInit() {
+  }
+
+}
