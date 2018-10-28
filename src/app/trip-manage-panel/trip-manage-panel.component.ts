@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sub-header',
-  templateUrl: './sub-header.component.html',
-  styleUrls: ['./sub-header.component.css']
+  selector: 'app-trip-manage-panel',
+  templateUrl: './trip-manage-panel.component.html',
+  styleUrls: ['./trip-manage-panel.component.css']
 })
-export class SubHeaderComponent implements OnInit {
+export class TripManagePanelComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -17,5 +16,4 @@ export class SubHeaderComponent implements OnInit {
   goBack() {
     this.router.navigate(['/dashboard']);
   }
-
 }

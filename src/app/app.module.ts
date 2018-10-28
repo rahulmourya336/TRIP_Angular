@@ -17,6 +17,8 @@ import { AddTripFormComponent } from './add-trip-form/add-trip-form.component';
 import { TripListComponent } from './trip-list/trip-list.component';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
 import { ToastMessageComponent } from './toast-message/toast-message.component';
+import { TripManagePanelComponent } from './trip-manage-panel/trip-manage-panel.component';
+import { AddExpenseComponent } from './add-expense/add-expense.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { ToastMessageComponent } from './toast-message/toast-message.component';
     TripListComponent,
     SubHeaderComponent,
     ToastMessageComponent,
+    TripManagePanelComponent,
+    AddExpenseComponent,
 
   ],
   imports: [

@@ -1,5 +1,7 @@
-function launch_toast() {
+function launch_toast(message) {
   var x = document.getElementById("toast")
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }
+
+exports.default = launch_toast(message);

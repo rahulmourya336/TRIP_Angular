@@ -1,9 +1,8 @@
 /* -- import Bootstrap v3 ----------------------------- */
-@import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";
-/* -- import Roboto Font ------------------------------ */
-@import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";
+/*@import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";*/
+/*!* -- import Roboto Font ------------------------------ *!*/
+/*@import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 /*-- Body style ---------------------------------- */
 *{
   font-family: 'Roboto Mono', monospace;

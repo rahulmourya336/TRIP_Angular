@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToastMessageComponent implements OnInit {
   private message: string;
-  constructor(private message: string) {
-    this.message = message;
+
+  constructor() {
   }
 
   ngOnInit() {

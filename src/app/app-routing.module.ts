@@ -8,6 +8,8 @@ import { ErrorPageComponent } from '../app/error-page/error-page.component';
 import { DashboardComponent } from '../app/dashboard/dashboard.component';
 import { LandingPageComponent } from '../app/landing-page/landing-page.component';
 import { AddTripFormComponent } from '../app/add-trip-form/add-trip-form.component';
+import { TripManagePanelComponent } from '../app/trip-manage-panel/trip-manage-panel.component';
+import { AddExpenseComponent } from '../app/add-expense/add-expense.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,15 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'landingPage', component: LandingPageComponent },
   { path: 'trip', component: AddTripFormComponent },
+  { path: 'manage', component: TripManagePanelComponent,
+    children: [
+      {
+        path: 'expense',
+        component: AddExpenseComponent,
+        outlet: 'manage_trip'
+      }
+    ]
+  },
 
   {path: '**', component: ErrorPageComponent }
 ];
