@@ -12,7 +12,7 @@
     <div id="sidebar-wrapper" class="sidebar-toggle">
       <ul class="sidebar-nav">
         <li>
-          <a [routerLink]="[{ outlets: {manage_trip: ['expense'] } }]">Add Expenses</a>
+          <a [routerLink]="[{ outlets: { manage_trip: ['expense'] } }]">Add Expenses</a>
         </li>
         <li>
           <a routerLink="/travellers">Manage Travellers</a>
@@ -22,7 +22,7 @@
         </li>
         <li></li>
         <li></li>
-        <li><a routerLink="/remove" class="remove__option">Remove Trip</a></li>
+        <li><a  class="remove__option" (click)="removeTrip(tripId)">Remove Trip</a></li>
       </ul>
     </div>
   </div>

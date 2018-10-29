@@ -11,7 +11,7 @@
           <strong class="d-inline-block mb-2 text-primary">{{tripList.name}}</strong>
           <p class="card-text mb-auto text-muted">Start Date: {{tripList.startDate}}</p>
           <p class="card-text mb-auto text-muted">End Date: {{tripList.endDate}}</p>
-          <a class="btn btn-outline-primary btn-sm" role="button" [routerLink]="['/manage']">Manage Trip</a>
+          <a class="btn btn-outline-primary btn-sm" role="button" [routerLink]="['/manage']" [queryParams]="{ id: tripList._id, name: tripList.name }">Manage Trip</a>
         </div>
         <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]"
              src="{{tripList.url}}" style="width: 200px; height: 250px;" >

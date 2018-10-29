@@ -10,6 +10,7 @@ import { LandingPageComponent } from '../app/landing-page/landing-page.component
 import { AddTripFormComponent } from '../app/add-trip-form/add-trip-form.component';
 import { TripManagePanelComponent } from '../app/trip-manage-panel/trip-manage-panel.component';
 import { AddExpenseComponent } from '../app/add-expense/add-expense.component';
+import { AddExpenseFormComponent } from '../app/add-expense-form/add-expense-form.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,11 @@ const routes: Routes = [
       {
         path: 'expense',
         component: AddExpenseComponent,
+        outlet: 'manage_trip'
+      },
+      {
+        path: 'add_expense',
+        component: AddExpenseFormComponent,
         outlet: 'manage_trip'
       }
     ]

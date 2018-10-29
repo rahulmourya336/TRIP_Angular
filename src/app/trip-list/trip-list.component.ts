@@ -39,27 +39,7 @@ export class TripListComponent implements OnInit, AfterViewInit {
       });
   }
 
-  removeTrip(tripId) {
-    this.Trip.removeTrip(tripId).subscribe(
-      data => {
-        if (data) {
-          if (Object.values(data)[0] === 500) {
-            // call function display internal server error
-            console.log('Internal Server Error');
-          } else if (Object.values(data)[0] === 200) {
-            this.router.navigate(['/dashboard']);
-            // Toast success
-            console.log('Trip Deleted');
-          } else {
-            // Unknown error
-            console.log('unknown error');
-          }
-        }
-      },
-      error => {
-        console.warn('Cannot Create trip:', error);
-      });
-  }
+
 
   patchTrip(tripId) {
 
